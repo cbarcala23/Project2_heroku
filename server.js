@@ -24,7 +24,9 @@ db.sequelize.sync({ force: true }).then(function () {
         console.log("App listening on PORT " + PORT);
     });
 
+    //SOCKET CONNECTION WITHIN APP SERVER
     var io = socket(server);
+
     io.on('connection', function (socket) {
         console.log('a user connected');
         socket.on('disconnect', function () {
