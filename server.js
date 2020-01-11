@@ -18,10 +18,10 @@ require("./routes/HTML")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: true }).then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+db.sequelize.sync({ force: true }).then(function () {
+    app.listen(PORT, function () {
+        console.log("App listening on PORT " + PORT);
+    });
 });
 
 
@@ -67,3 +67,4 @@ io.on('connection', function (socket) {
 http.listen(8080, function () {
     console.log('sockets listening on *:8080');
 });
+
