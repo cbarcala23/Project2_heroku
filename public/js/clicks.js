@@ -1,37 +1,37 @@
 $("#kpop").on("click", function(event) {
     event.preventDefault();
     console.log("click is firing");
-    window.location.replace("http://localhost:8080/kpop");
+    window.location.replace("https://serene-headland-87883.herokuapp.com/kpop");
 });
 
 $("#hiphop").on("click", function(event) {
     event.preventDefault();
     console.log("click is firing");
-    window.location.replace("http://localhost:8080/hiphop");
+    window.location.replace("https://serene-headland-87883.herokuapp.com/hiphop");
 });
 
 $("#rock").on("click", function(event) {
     event.preventDefault();
     console.log("click is firing");
-    window.location.replace("http://localhost:8080/rock");
+    window.location.replace("https://serene-headland-87883.herokuapp.com/rock");
 });
 
 $("#classical").on("click", function(event) {
     event.preventDefault();
     console.log("click is firing");
-    window.location.replace("http://localhost:8080/classical");
+    window.location.replace("https://serene-headland-87883.herokuapp.com/classical");
 });
 
 $("#jazz").on("click", function(event) {
     event.preventDefault();
     console.log("click is firing");
-    window.location.replace("http://localhost:8080/jazz");
+    window.location.replace("https://serene-headland-87883.herokuapp.com/jazz");
 });
 
 $("#edm").on("click", function(event) {
     event.preventDefault();
     console.log("click is firing");
-    window.location.replace("http://localhost:8080/edm");
+    window.location.replace("/edm");
 });
 $("#back").on("click", function(event) {
     event.preventDefault();
