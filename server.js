@@ -103,11 +103,3 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/hiphop.html');
 });
 
-
-
-
-
-// http.listen(8080, function () {
-//     console.log('sockets listening on *:8080');
-// });
-
