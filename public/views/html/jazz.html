@@ -118,81 +118,79 @@
     <div class="container">
         <div class="row d-flex justify-content-start">
             <div class="col">
-                    <button i class="fa fa-arrow-left fa-2x" type="submit" id="back"></button></a>
-                    <h1>Jazz</h1>
+                <button i class="fa fa-arrow-left fa-2x" type="submit" id="back"></button></a>
+                <h1>Jazz</h1>
                 <br />
-            </div>
-            <div class="col d-flex justify-content-end">
-                <a href="">
-                    <h3 id="get">Get playlist</h3>
-                </a>
             </div>
         </div>
         <div class="row">
             <div class="col d-flex justify-content-start">
-                <div class="card" style="width: 30rem; height: 30rem">
-                    <div class="card-body">
-                        <h5 class="card-title">Chat
-                            <div id="messagebox">
-                                <ul id="messages"></ul>
-                            </div>
-                            <form class="chat" action="">
-                                <div><input id="m" autocomplete="off" /></div>
-                                <div><button class="chatbutton">Send</button></div>
-                            </form>
+                <div class="row">
+                    <div class="col d-flex justify-content-start">
+                        <div class="card" style="width: 30rem; height: 30rem">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="span2">
+                                        <ul id="people" class="unstyled"></ul>
+                                    </div>
+                                    <div class="span4">
+                                        <ul id="msgs" class="unstyled">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="span5 offset2" id="login">
+                                        <form class="form-inline">
+                                            <input type="text" class="input-small" placeholder="Your name" id="name">
+                                            <input type="button" name="join" id="join" value="Join"
+                                                class="btn btn-primary">
+                                        </form>
+                                    </div>
 
-                            <script src="/socket.io/socket.io.js"></script>
-                            <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-                            <script>
-                                $(function () {
-                                    var socket = io();
-                                    $('.chat').submit(function (e) {
-                                        e.preventDefault(); // prevents page reloading
-                                        socket.emit('chat message', $('#m').val());
-                                        $('#m').val('');
-                                        return false;
-                                    });
-                                    socket.on('chat message', function (msg) {
-                                        $('#messages').append($('<li>').text(msg));
-                                        window.scrollTo(0, document.body.scrollHeight);
-                                    });
-                                });
-                            </script>
-                        </h5>
+                                    <div class="span5 offset2" id="chat">
+                                        <form id="2" class="form-inline">
+                                            <input type="text" class="input" placeholder="Your message" id="msg">
+                                            <input type="button" name="send" id="send" value="Send"
+                                                class="btn btn-success">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col d-flex justify-content-end">
-                <div class="card" style="width: 25rem; height: 20rem">
-                    <div class="card-body">
-                        <h5 class="card-title">Playlist goes here
-                            
-                        </h5>
-                        <form class="form-inline">
-                            <button i class="fa fa-plus fa-2x" id="submitbutton" type="submit"></button>
-                            <input class="form-control" type="search" placeholder="Add artist/song" id="addMusic">
-                        </form>
-                        <div id="playlist"></div>
+                <div class="col d-flex justify-content-end">
+                    <div class="card" style="width: 25rem; height: 20rem">
+                        <div class="card-body">
+                            <h5 class="card-title">Playlist goes here
+                            </h5>
+                            <form class="form-inline">
+                                <button i class="fa fa-plus fa-2x" id="submitbutton" type="submit"></button>
+                                <input class="form-control" type="search" placeholder="Add artist/song" id="addMusic">
+                            </form>
+                            <div id="playlist"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <br />
-    <br />
-    <br />
-    <footer>
-        <div class="card text-center" id="nowPlaying">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <div class="card text-center" id="nowPlaying"></div>
-                </h5>
+        <br />
+        <br />
+        <br />
+        <footer>
+            <div class="card text-center" id="nowPlaying">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <div class="card text-center" id="nowPlaying"></div>
+                    </h5>
+                </div>
             </div>
-        </div>
-    </footer>
-    <script src="../../js/lounge.js"></script>
-    <!-- <script src="../../js/chat.js"></script> -->
-    <script src="../../js/clicks.js"></script>
+        </footer>
+        <script src="../../js/lounge.js"></script>
+        <script src="../../js/clicks.js"></script>
+        <script src="../../js/chat.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
 </body>
 
 </html>
