@@ -19,7 +19,7 @@
   "dependencies": {
     "axios": "^0.19.1",
     "bcryptjs": "2.4.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.16.1",
     "mysql2": "^1.6.4",
     "passport": "^0.4.1",
